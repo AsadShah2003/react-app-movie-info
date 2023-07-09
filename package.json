@@ -1,5 +1,6 @@
 {
-  "name": "demo_1",
+  "homepage": "http://AsadShah2003.github.io/AsadShah2003/react-app-movie-info",
+  "name": "movie_app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,6 +16,8 @@
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
+    "predeploy": "npm run build",
+    "deploy": "gh-page -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -35,5 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0",
+    "s": "^1.0.0"
   }
 }
