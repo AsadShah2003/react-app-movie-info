@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Ubuntu&display=swap");
+.ui {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Movies {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  width: 95%;
+  flex-wrap: wrap;
+  top: 10px;
+  height: 100%;
+  max-width: 1400px;
+}
+
+.movie-image {
+  position: relative;
+  height: 370px;
+  cursor: pointer;
+}
+.movie-card {
+  color: white;
+  background-color: #333333;
+  position: relative;
+  width: 270px;
+  height: 620px;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  top: 70px;
+  flex-shrink: 0;
+}
+
+.movie-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 8px;
+  height: 30%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.movie-image img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+#title {
+  color: #eeeeee;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+.movie-meta-info {
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  gap: 1em;
+  width: fit-content;
+  height: fit-content;
+  color: #ccc;
+  font-weight: 700;
+  font-size: 0.8em;
+  word-spacing: 2px;
+  position: relative;
+  bottom: 18px;
+}
+.movie-meta-info h4 {
+  color: #e0e0e0;
+}
+.movie-info {
+  position: relative;
+  bottom: 32px;
+  line-height: 1.5;
+}
+.movie-info p {
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-size: 0.8em;
+  color: #f7f7f7;
+}
+
+/* PLAY ICON */
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.movie-image:hover .play-icon {
+  opacity: 2;
+}
+
+.fa-play {
+  font-size: 48px;
+  color: white;
+}
+.read-more {
+  font-size: 13px !important;
+  color: #6fcdff !important;
+  position: absolute !important;
+  bottom: -40px !important;
+  cursor: pointer !important;
+  text-decoration: none;
+}
+.content {
+  padding: 8px 18px;
+}
+.read-more:hover {
+  transition: all 0.4s ease-in !important;
+  font-size: 14px !important;
+}
+
+.showing {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  height: 50px;
+  top: 20px;
+  gap: 50rem;
+  right: 10px;
+  width: 100%;
+  align-items: center;
+}
+@media (max-width: 1245px) {
+  .showing {
+    display: none;
+  }
+}
+@media (max-width: 940px) {
+}
+.latest {
+  font-family: "Ubuntu";
+  letter-spacing: 1px;
+  font-size: 30px;
+  color: white;
+}
+.page-no {
+  color: white;
+  position: relative;
+}
+
+/* STYLES FOR PAGINATION */
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  width: 1200px;
+  position: relative;
+  top: 50px;
+  height: 120px;
+  align-items: center;
+  right: 20px;
+}
+.pageNo {
+  display: flex;
+  width: 300px;
+  flex-direction: row;
+  gap: 1em;
+}
+.pagination button {
+  background-color: goldenrod;
+  color: black;
+  cursor: pointer;
+  border: none;
+  opacity: 0.9;
+  outline: none;
+  width: 140px;
+  padding: 15px 0px;
+}
+.pagination button:hover {
+  transition: all 0.3s ease;
+  opacity: 2;
+}
+
+#jumpTxt {
+  position: absolute;
+  outline: none;
+  right: 370px;
+  border: none;
+  letter-spacing: 1.5px;
+  padding: 10px 12px;
+  /* border: 2px solid #6fcdff; */
+  background-color: #333333;
+  color: white;
+}
+#jmpBtn {
+  cursor: pointer;
+  background-color: #333333;
+  outline: none;
+  color: #ccc;
+  border: 1px solid #050404;
+  border-radius: 8px;
+  position: absolute;
+  right: 220px;
+  padding: 10px;
+  width: 130px;
+}
+
+@media (max-width: 620px) {
+  .movie-card {
+    min-width: 84%;
+  }
+}

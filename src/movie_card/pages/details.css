@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,500&display=swap");
+.details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.spin {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.imp-details {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+.details-card {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #faf9f6;
+  margin: 0 auto;
+}
+
+.movie-poster {
+  width: 40%;
+  max-width: 400px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.movie-poster img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-details {
+  width: 100%;
+  max-width: 800px;
+  color: #faf9f6;
+}
+
+.movie-content h1 {
+  font-family: "Poppins";
+  font-size: 37px;
+}
+
+p,
+h4,
+h3 {
+  font-family: "Poppins";
+  font-weight: 300;
+}
+
+p span,
+h3 span,
+h4 span {
+  color: goldenrod;
+}
+
+.btn-cta {
+  padding: 10px 17px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: rgb(53, 52, 52);
+  background-color: goldenrod;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  opacity: 0.9;
+  border-radius: 6px;
+}
+
+.btn-cta:hover {
+  opacity: 2;
+}
+
+.back-btn {
+  position: relative;
+  top: 40px;
+}
+
+.back-btn i {
+  cursor: pointer;
+  color: goldenrod;
+  opacity: 0.9;
+  font-size: 45px;
+}
+
+.back-btn i:hover {
+  opacity: 2;
+}
+
+@media (max-width: 768px) {
+  .imp-details {
+    flex-direction: column;
+    align-items: center;
+  }
+  .details-container {
+    margin-top: 240px;
+  }
+  .details-card {
+    width: 90%;
+    padding: 1em;
+  }
+
+  .movie-poster {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .movie-details {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .details-container {
+    justify-content: center;
+  }
+
+  .details-card {
+    width: 80%;
+    padding: 50px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 946px) {
+  .back-btn {
+    left: 30px;
+    top: -20px;
+  }
+}

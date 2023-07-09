@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Ubuntu&display=swap");
+
+.navbar {
+  font-family: "Open sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 140px;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+}
+.brand h1 {
+  color: goldenrod;
+}
+.brand {
+  color: white;
+  font-family: "Poppins";
+  font-weight: bold;
+  position: relative;
+  left: 20px;
+  font-size: 1.3em;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  padding: 10px;
+}
+.nav-list li a:hover {
+  color: goldenrod;
+  transition: all 0.4s ease-in-out;
+  border-bottom: 2px solid goldenrod;
+}
+.fa-search {
+  position: absolute;
+  cursor: pointer;
+  top: 62px;
+
+  color: white;
+}
+.searchBar {
+  position: absolute;
+  padding: 10px;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  font-size: 15px;
+  position: relative;
+  opacity: 0;
+  color: wheat;
+  border: none;
+  border-bottom: 3px solid goldenrod;
+  width: 0;
+  max-width: 0;
+  transition: width 0.3s ease, max-width 0.3s ease;
+}
+
+.searchBar.active {
+  overflow: hidden;
+  opacity: 1;
+  width: 130px;
+  max-width: 130px;
+}
+
+@media (max-width: 1240px) {
+  .nav-list {
+    display: none;
+  }
+  .brand {
+    position: relative;
+    right: 50px;
+  }
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  z-index: 999;
+  overflow: hidden;
+  position: relative;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.drawer {
+  overflow-y: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #333333;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  z-index: 999;
+}
+
+.active.drawer {
+  transform: translateX(0%);
+}
+
+.drawer-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 50px;
+}
+
+.drawer-nav-list li {
+  margin-bottom: 1em;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.drawer-nav-list li a {
+  font-family: "Poppins";
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 20px;
+  width: 100%;
+}
+
+@media (max-width: 1240px) {
+  .nav-items.active {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+  }
+}
+#credit {
+  position: absolute;
+  color: rgb(214, 214, 214);
+  bottom: 0;
+  font-family: "Poppins";
+}
+.fa-heart {
+  color: rgb(212, 4, 4);
+}
